@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhairya Verma | Data Science & DSA Specialist | Wispr Flow Vertical Curved Portfolio</title>
+  <meta name="description" content="Wispr Flow inspired vertical curved scrolling portfolio of Dhairya Verma - 19-year-old B.Tech CS (Data Science) undergraduate at United Institute of Technology, C++ & Python Specialist, and Hackathon Builder." />
+
+  <!-- Google Fonts: DM Serif Display, Instrument Serif, Plus Jakarta Sans, Outfit, Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Fira+Code:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+/* ===================================================================
+   WISPR FLOW VERTICAL CURVED SCROLLING DESIGN SYSTEM
+   =================================================================== */
+
+:root {
+  /* Wispr Dark Theme (Default) */
+  --bg-dark: #121214;
+  --bg-surface: #18181c;
+  --bg-card: #1f1f24;
+  --bg-card-hover: #26262d;
+  
+  /* Floating Nav Pill (Wispr Flow signature cream pill in dark mode) */
+  --nav-bg: #fcfbf7;
+  --nav-text: #161617;
+  --nav-muted: #646468;
+  --nav-border: rgba(255, 255, 255, 0.15);
+  
+  /* Text colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-dark: #121214;
+  
+  /* Wispr Flow Signature Vibrant Card Palette */
+  --card-green-bg: #10b981;
+  --card-green-text: #022c1e;
+  
+  --card-orange-bg: #f97316;
+  --card-orange-text: #3b1100;
+  
+  --card-cream-bg: #fef08a;
+  --card-cream-text: #1c1917;
+  
+  --card-cyan-bg: #06b6d4;
+  --card-cyan-text: #042833;
+  
+  --card-purple-bg: #a855f7;
+  --card-purple-text: #2c0750;
+
+  --card-coral-bg: #f43f5e;
+  --card-coral-text: #39030c;
+
+  --card-blue-bg: #3b82f6;
+  --card-blue-text: #051b3b;
+
+  --card-yellow-bg: #eab308;
+  --card-yellow-text: #382400;
+
+  /* Accent highlights */
+  --accent-orange: #ff9f38;
+  --accent-orange-glow: rgba(255, 159, 56, 0.35);
+  --accent-green: #28c780;
+  
+  /* Borders & Shadows */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.12);
+  --shadow-wispr: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.3);
+  
+  /* Fonts */
+  --font-serif: 'DM Serif Display', 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme Overrides (Wispr Flow Cream Porcelain Aesthetic) */
+[data-theme="light"] {
+  --bg-dark: #fcfbf7;
+  --bg-surface: #f3f1e9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+  
+  --nav-bg: #161617;
+  --nav-text: #ffffff;
+  --nav-muted: #a1a1aa;
+  --nav-border: rgba(0, 0, 0, 0.1);
+  
+  --text-primary: #161617;
+  --text-secondary: #27272a;
+  --text-muted: #52525b;
+  --text-dim: #71717a;
+  --text-dark: #ffffff;
+  
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(0, 0, 0, 0.1);
+  --shadow-wispr: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: #33333b; border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-orange); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+a { color: inherit; text-decoration: none; transition: all var(--transition-fast); }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.text-orange { color: var(--accent-orange) !important; }
+.text-green { color: var(--accent-green) !important; }
+.text-center { text-align: center; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 26px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  position: relative;
+  z-index: 5;
+}
+
+.btn-wispr-dark {
+  background: #161617;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+[data-theme="light"] .btn-wispr-dark {
+  background: #ffffff;
+  color: #161617;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn-wispr-dark:hover {
+  background: var(--accent-orange);
+  color: #121214;
+  border-color: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 159, 56, 0.35);
+}
+
+.btn-wispr-pill {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+}
+
+.btn-wispr-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-sm { padding: 8px 20px; font-size: 0.95rem; }
+
+/* ==================== FLOATING WISPR FLOW NAVBAR ==================== */
+.wispr-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.wispr-nav-pill {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 8px 12px 8px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--nav-border);
+  transition: all var(--transition-normal);
+  max-width: 1020px;
+  width: 100%;
+}
+
+.wispr-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--nav-text);
+}
+
+.wispr-brand-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--nav-text);
+  color: var(--nav-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.wispr-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.wispr-nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nav-muted);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.wispr-nav-link:hover, .wispr-nav-link.active {
+  color: var(--nav-text);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .wispr-nav-link:hover, 
+[data-theme="light"] .wispr-nav-link.active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.wispr-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--nav-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform var(--transition-fast);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.theme-toggle-btn:hover { transform: scale(1.1) rotate(15deg); }
+
+.mobile-toggle-btn {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.06);
+  color: var(--nav-text);
+  align-items: center;
+  justify-content: center;
+}
+
+.wispr-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  right: 20px;
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  pointer-events: auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wispr-mobile-menu.open { display: flex; }
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 159, 56, 0.12);
+  border: 1px solid var(--accent-orange-glow);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 24px;
+}
+
+.hero-main-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.hero-sub-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+/* Center Grid with Photo Arch & Side Widgets */
+.hero-widgets-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.hero-left-col, .hero-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wispr-card-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(16px);
+  transition: transform var(--transition-fast);
+}
+
+.wispr-card-widget:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-orange);
+}
+
+.hero-photo-arch-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-photo-arch {
+  width: 100%;
+  max-width: 380px;
+  height: 440px;
+  background: linear-gradient(180deg, rgba(255, 159, 56, 0.2) 0%, rgba(25, 25, 28, 0.95) 100%);
+  border: 2px solid var(--border-card);
+  border-radius: 200px 200px 32px 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-wispr);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.hero-photo-arch:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 25px 60px rgba(255, 159, 56, 0.25);
+}
+
+.hero-cutout-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-photo-arch:hover .hero-cutout-img {
+  transform: scale(1.04);
+}
+
+.scroll-hint-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  animation: bounceDown 2s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* ==================== MARQUEE TICKER ==================== */
+.marquee-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 18px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  animation: marqueeScroll 24s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.marquee-item i { color: var(--accent-orange); font-size: 0.85rem; }
+
+/* ===================================================================
+   WISPR FLOW VERTICAL SCROLL STICKY CURVED PATH SYSTEM (SIGNATURE FEATURE)
+   =================================================================== */
+.wispr-sticky-scroll-section {
+  position: relative;
+  /* Multiplier height to give smooth vertical scroll room */
+  height: 380vh;
+}
+
+.wispr-sticky-viewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wispr-curved-track-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wispr Card Base for Vertical Curved Motion */
+.wispr-curved-card {
+  position: absolute;
+  width: 100%;
+  max-width: 680px;
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  pointer-events: auto;
+  will-change: transform, opacity;
+  transform-origin: center center;
+  transition: box-shadow var(--transition-normal);
+}
+
+.wispr-curved-card:hover {
+  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.6);
+}
+
+/* Color Variant Classes */
+.card-theme-green { background: var(--card-green-bg); color: var(--card-green-text); }
+.card-theme-orange { background: var(--card-orange-bg); color: var(--card-orange-text); }
+.card-theme-cream { background: var(--card-cream-bg); color: var(--card-cream-text); }
+.card-theme-cyan { background: var(--card-cyan-bg); color: var(--card-cyan-text); }
+.card-theme-purple { background: var(--card-purple-bg); color: var(--card-purple-text); }
+.card-theme-coral { background: var(--card-coral-bg); color: var(--card-coral-text); }
+.card-theme-blue { background: var(--card-blue-bg); color: var(--card-blue-text); }
+.card-theme-yellow { background: var(--card-yellow-bg); color: var(--card-yellow-text); }
+
+.wispr-card-top-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.15);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.wispr-card-graphic {
+  width: 100%;
+  height: 180px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wispr-card-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.wispr-card-quote {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.wispr-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.wispr-card-tag-item {
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.wispr-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.wispr-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: #000000;
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.wispr-card-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Pagination indicator dots for sticky scroll */
+.scroll-progress-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.progress-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-fast);
+}
+
+.progress-dot.active {
+  width: 28px;
+  border-radius: var(--radius-full);
+  background: var(--accent-orange);
+}
+
+/* ==================== SERVICES ACCORDION ==================== */
+.services-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.accordion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px 36px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion-card:not(.active):hover {
+  background: var(--bg-card-hover);
+  transform: translateX(6px);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.accordion-num {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--text-dim);
+}
+
+.accordion-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.accordion-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: transform var(--transition-fast);
+}
+
+.accordion-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-card.active {
+  background: var(--accent-orange) !important;
+  border-color: var(--accent-orange) !important;
+  box-shadow: 0 15px 35px rgba(255, 159, 56, 0.3);
+}
+
+.accordion-card.active .accordion-num,
+.accordion-card.active .accordion-title {
+  color: #121214 !important;
+}
+
+.accordion-card.active .accordion-icon {
+  background: #121214 !important;
+  color: var(--accent-orange) !important;
+  transform: rotate(45deg);
+}
+
+.accordion-card.active .accordion-body {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.accordion-desc-text {
+  color: #1a1a24;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* ==================== ABOUT & CONTACT ==================== */
+.about-contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.about-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
+.form-control {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--accent-orange);
+}
+
+/* Footer */
+.wispr-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Toast */
+.toast-container { position: fixed; bottom: 30px; right: 30px; z-index: 3000; }
+.toast-card {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-orange);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-wispr);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+.modal-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  max-width: 680px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+  .hero-widgets-grid { grid-template-columns: 1fr; }
+  .about-contact-grid { grid-template-columns: 1fr; }
+  .wispr-curved-card { max-width: 90vw; padding: 28px; }
+  .wispr-nav-links { display: none; }
+  .mobile-toggle-btn { display: flex; }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ==================== FLOATING WISPR FLOW NAVBAR ==================== -->
+  <header class="wispr-header">
+    <div class="wispr-nav-pill">
+      <a href="#home" class="wispr-brand">
+        <div class="wispr-brand-icon"><i class="fas fa-bolt"></i></div>
+        <span>Dhairya <span class="font-serif">Flow</span></span>
+      </a>
+
+      <ul class="wispr-nav-links">
+        <li><a href="#home" class="wispr-nav-link active">Home</a></li>
+        <li><a href="#projects-section" class="wispr-nav-link">Projects</a></li>
+        <li><a href="#tools-section" class="wispr-nav-link">Tools</a></li>
+        <li><a href="#achievements-section" class="wispr-nav-link">Achievements</a></li>
+        <li><a href="#services" class="wispr-nav-link">Services</a></li>
+        <li><a href="#journey-section" class="wispr-nav-link">Journey</a></li>
+        <li><a href="#about" class="wispr-nav-link">Contact</a></li>
+      </ul>
+
+      <div class="wispr-nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Light/Dark Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#about" class="btn btn-wispr-dark btn-sm">
+          <span>Let's Talk</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle-btn" id="mobile-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="wispr-mobile-menu" id="mobile-menu">
+    <a href="#home" class="wispr-nav-link">Home</a>
+    <a href="#projects-section" class="wispr-nav-link">Projects</a>
+    <a href="#tools-section" class="wispr-nav-link">Tools</a>
+    <a href="#achievements-section" class="wispr-nav-link">Achievements</a>
+    <a href="#services" class="wispr-nav-link">Services</a>
+    <a href="#journey-section" class="wispr-nav-link">Journey</a>
+    <a href="#about" class="wispr-nav-link">Contact</a>
+  </div>
+
+  <!-- ==================== HERO SECTION (WISPR FLOW STYLE) ==================== -->
+  <section id="home" class="hero-section">
+    <div class="container text-center">
+      
+      <div class="hero-pill-badge">
+        <i class="fas fa-sparkles"></i>
+        <span>Scroll Down Vertically — Watch Cards Curve Bottom-Left to Top-Right</span>
+      </div>
+
+      <h1 class="hero-main-heading">
+        Building <span class="font-serif italic text-orange">Intelligence</span> Without Limits.
+      </h1>
+
+      <p class="hero-sub-text text-center" style="margin-left: auto; margin-right: auto;">
+        I'm <strong style="color:var(--text-primary);">Dhairya Verma</strong> — 19-year-old B.Tech CS (Data Science) undergrad at United Institute of Technology, C++ & Python Specialist, and Hackathon Builder.
+      </p>
+
+      <!-- Center Layout Grid: Side Widgets + Photo Arch -->
+      <div class="hero-widgets-grid">
+        
+        <!-- Left Widget -->
+        <div class="hero-left-col">
+          <div class="wispr-card-widget">
+            <div style="color:var(--accent-orange); margin-bottom:8px;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h3 style="font-size:1.35rem; margin-bottom:4px;">Hackathon Developer</h3>
+            <p style="font-size:0.88rem; color:var(--text-muted);">Data Science Learner & 70+ Solved Algorithmic DSA Problems</p>
+          </div>
+          
+          <div style="display:flex; gap:12px; justify-content:center;">
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="btn btn-wispr-pill btn-sm" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/dhairya-verma-89639b35b/" target="_blank" class="btn btn-wispr-pill btn-sm" title="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <!-- Center Arch Photo Cutout -->
+        <div class="hero-photo-arch-wrap">
+          <div class="hero-photo-arch">
+            <img src="profile.png" alt="Dhairya Verma" class="hero-cutout-img" />
+          </div>
+        </div>
+
+        <!-- Right Widget -->
+        <div class="hero-right-col">
+          <div class="wispr-card-widget">
+            <i class="fas fa-quote-left text-orange" style="font-size:1.4rem; margin-bottom:10px;"></i>
+            <p class="font-serif" style="font-size:1.15rem; color:var(--text-primary); line-height:1.4;">
+              "Dhairya combines high-speed hackathon execution with clean algorithmic logic in C++ and Python."
+            </p>
+          </div>
+
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center;">
+            <span class="btn btn-wispr-pill btn-sm" style="font-size:0.8rem;">C++ STL</span>
+            <span class="btn btn-wispr-pill btn-sm" style="font-size:0.8rem;">Python</span>
+            <span class="btn btn-wispr-pill btn-sm" style="font-size:0.8rem;">Supabase</span>
+            <span class="btn btn-wispr-pill btn-sm" style="font-size:0.8rem;">WebSockets</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-hint-bar">
+        <span>Scroll Vertically Downward — Wispr Curved Card Motion</span>
+        <i class="fas fa-arrow-down text-orange"></i>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE TICKER ==================== -->
+  <section class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><span>Data Science</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>C++ & Python Specialist</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Supabase Real-Time</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Firebase Cloud</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Multiplayer WebSockets</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>70+ DSA Problems</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Rapid Hackathon MVP</span> <i class="fas fa-sparkle"></i></div>
+      <!-- Loop duplicate -->
+      <div class="marquee-item"><span>Data Science</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>C++ & Python Specialist</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Supabase Real-Time</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Firebase Cloud</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Multiplayer WebSockets</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>70+ DSA Problems</span> <i class="fas fa-sparkle"></i></div>
+      <div class="marquee-item"><span>Rapid Hackathon MVP</span> <i class="fas fa-sparkle"></i></div>
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 1: PROJECTS SHOWCASE (VERTICAL STICKY CURVED SCROLLING TRACK)
+       =================================================================== -->
+  <div id="projects-section" class="wispr-sticky-scroll-section" data-curved-track="projects">
+    <div class="wispr-sticky-viewport">
+      <div class="container text-center" style="margin-bottom: 20px;">
+        <div class="hero-pill-badge" style="margin-bottom:12px;">
+          <i class="fas fa-sparkles"></i>
+          <span>01 / FEATURED PROJECTS (CURVED VERTICAL SCROLL)</span>
+        </div>
+        <h2 class="hero-main-heading" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); margin-bottom:0;">
+          Scroll Vertically Down to Curve Through <span class="font-serif italic text-orange">Projects</span>
+        </h2>
+      </div>
+
+      <div class="wispr-curved-track-stage">
+
+        <!-- Card 1: Mint Green -->
+        <div class="wispr-curved-card card-theme-green" data-index="0">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-brain"></i> AI / ML Vision Engine</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-eye" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">OmniSight: Multi-Modal AI Agent</h3>
+            <p class="wispr-card-quote">"Autonomous real-time video intelligence and scene understanding engine leveraging fine-tuned vision models."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">PyTorch</span>
+              <span class="wispr-card-tag-item">OpenCV</span>
+              <span class="wispr-card-tag-item">FastAPI</span>
+              <span class="wispr-card-tag-item">CUDA</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">35ms Inference Latency</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="omnisight">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Warm Amber / Orange -->
+        <div class="wispr-curved-card card-theme-orange" data-index="1">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-microchip"></i> Systems & C++20</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-bolt" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">HyperFlow: Low Latency Matching Engine</h3>
+            <p class="wispr-card-quote">"Ultra-fast lock-free order matching engine written in modern C++20 capable of 2.5M transactions per second."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">C++20</span>
+              <span class="wispr-card-tag-item">Lock-Free</span>
+              <span class="wispr-card-tag-item">Multithreading</span>
+              <span class="wispr-card-tag-item">Linux</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">2.5M Tx/sec</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="hyperflow">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Porcelain Cream -->
+        <div class="wispr-curved-card card-theme-cream" data-index="2">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-chess"></i> Real-Time WebSockets</span>
+            <div class="wispr-card-graphic">
+              <img src="rookie.jpg" alt="Rookie Chess" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\"fas fa-chess-king\" style=\"font-size:3.5rem;\"></i>';" />
+            </div>
+            <h3 class="wispr-card-title">Rookie.com: Multiplayer Chess Engine</h3>
+            <p class="wispr-card-quote">"Low-latency WebSockets multiplayer chess application with instantaneous turn synchronization and room invitation links."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Node.js</span>
+              <span class="wispr-card-tag-item">Socket.io</span>
+              <span class="wispr-card-tag-item">WebSockets</span>
+              <span class="wispr-card-tag-item">React</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Instant Move Sync</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="rookie">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Electric Cyan -->
+        <div class="wispr-curved-card card-theme-cyan" data-index="3">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-cloud"></i> Cloud Analytics</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-chart-area" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">NexusData: Cloud Analytics Platform</h3>
+            <p class="wispr-card-quote">"Modern collaborative SaaS analytics suite offering instant SQL exploration, automated ETL ingestion, and canvas dashboards."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">React</span>
+              <span class="wispr-card-tag-item">Next.js</span>
+              <span class="wispr-card-tag-item">PostgreSQL</span>
+              <span class="wispr-card-tag-item">BigQuery</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Real-Time ETL</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="nexusdata">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Soft Purple -->
+        <div class="wispr-curved-card card-theme-purple" data-index="4">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-trophy"></i> Hackathon Sprints</span>
+            <div class="wispr-card-graphic">
+              <img src="skillsetu.jpg" alt="Skill Setu" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\"fas fa-laptop-code\" style=\"font-size:3.5rem;\"></i>';" />
+            </div>
+            <h3 class="wispr-card-title">Skill Setu, VidyaSetu & CodeTantraa</h3>
+            <p class="wispr-card-quote">"Architected high-speed backend systems with Supabase & Firebase under 24-48hr hackathon deadlines. Live on Render."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Supabase</span>
+              <span class="wispr-card-tag-item">Firebase</span>
+              <span class="wispr-card-tag-item">Node.js</span>
+              <span class="wispr-card-tag-item">Render</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">24-48hr MVPs</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="hackathon">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Coral / Rose -->
+        <div class="wispr-curved-card card-theme-coral" data-index="5">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-chart-line"></i> Data Science ML</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-square-poll-vertical" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">AlphaForecast: Financial Predictive AI</h3>
+            <p class="wispr-card-quote">"Deep transformer and LSTM neural model for temporal multivariate asset price forecasting and risk factor decomposition."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Python</span>
+              <span class="wispr-card-tag-item">TensorFlow</span>
+              <span class="wispr-card-tag-item">Pandas</span>
+              <span class="wispr-card-tag-item">Scikit-Learn</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">LSTM Predictive AI</span>
+            <button class="wispr-card-btn open-modal-btn" data-id="alphaforecast">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-progress-pills" id="projects-dots"></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 2: TOOLS & TECH STACK (VERTICAL STICKY CURVED SCROLLING TRACK)
+       =================================================================== -->
+  <div id="tools-section" class="wispr-sticky-scroll-section" style="background:var(--bg-surface);" data-curved-track="tools">
+    <div class="wispr-sticky-viewport">
+      <div class="container text-center" style="margin-bottom: 20px;">
+        <div class="hero-pill-badge" style="margin-bottom:12px;">
+          <i class="fas fa-layer-group"></i>
+          <span>02 / TECH STACK SHOWCASE (CURVED VERTICAL SCROLL)</span>
+        </div>
+        <h2 class="hero-main-heading" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); margin-bottom:0;">
+          Scroll Vertically Down for Every Single <span class="font-serif italic text-orange">Tool</span>
+        </h2>
+      </div>
+
+      <div class="wispr-curved-track-stage">
+
+        <!-- Tool 1: C++ STL -->
+        <div class="wispr-curved-card card-theme-orange" data-index="0">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fas fa-code"></i> Core Language</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">95% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-laptop-code" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">C++ (STL) & Systems Logic</h3>
+            <p class="wispr-card-quote">"Used for high-speed algorithmic execution, 70+ DSA problem implementations, and low-latency multithreaded engines."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">C++20</span>
+              <span class="wispr-card-tag-item">Standard Template Library</span>
+              <span class="wispr-card-tag-item">Memory Management</span>
+              <span class="wispr-card-tag-item">Pointers</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">70+ Solved DSA Problems</span>
+            <a href="https://takeuforward.org/profile/dhairya_7" target="_blank" class="wispr-card-btn">
+              <span>View TUF DSA</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tool 2: Python & Data Science -->
+        <div class="wispr-curved-card card-theme-green" data-index="1">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fab fa-python"></i> Data Science & ML</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">92% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-chart-line" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Python & Data Analytics</h3>
+            <p class="wispr-card-quote">"Primary language for Data Science coursework, data cleaning pipelines, statistical computing, and predictive models."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Pandas</span>
+              <span class="wispr-card-tag-item">NumPy</span>
+              <span class="wispr-card-tag-item">Scikit-Learn</span>
+              <span class="wispr-card-tag-item">PyTorch</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Kaggle Data Pipelines</span>
+            <a href="https://www.kaggle.com/dhairyaverma07" target="_blank" class="wispr-card-btn">
+              <span>Kaggle Profile</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tool 3: Supabase -->
+        <div class="wispr-curved-card card-theme-cream" data-index="2">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fas fa-database"></i> Real-Time Database</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">90% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-server" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Supabase Real-Time Engine</h3>
+            <p class="wispr-card-quote">"Leveraged across hackathon builds for PostgreSQL data sync, instant channel subscriptions, and Row-Level Security (RLS)."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">PostgreSQL</span>
+              <span class="wispr-card-tag-item">Realtime Channels</span>
+              <span class="wispr-card-tag-item">RLS Policies</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Hackathon Backend Stack</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Repos</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tool 4: Firebase -->
+        <div class="wispr-curved-card card-theme-cyan" data-index="3">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fas fa-fire"></i> Cloud Infrastructure</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">88% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-cloud-upload-alt" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Firebase Cloud & Auth</h3>
+            <p class="wispr-card-quote">"Used for cloud document synchronization, OAuth authentication streams, and real-time state listeners in web apps."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Firestore</span>
+              <span class="wispr-card-tag-item">Firebase Auth</span>
+              <span class="wispr-card-tag-item">Cloud Functions</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Cloud Auth & Sync</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Code</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tool 5: Node.js & REST -->
+        <div class="wispr-curved-card card-theme-purple" data-index="4">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fab fa-node-js"></i> Backend Server</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">90% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-network-wired" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Node.js & Express REST APIs</h3>
+            <p class="wispr-card-quote">"Architecting asynchronous REST microservices, middleware security, and JSON data transformations."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Express.js</span>
+              <span class="wispr-card-tag-item">REST Endpoints</span>
+              <span class="wispr-card-tag-item">JWT Security</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Backend Microservices</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>Explore GitHub</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tool 6: Socket.io -->
+        <div class="wispr-curved-card card-theme-coral" data-index="5">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+              <span class="wispr-card-top-tag" style="margin-bottom:0;"><i class="fas fa-plug"></i> WebSockets</span>
+              <span style="font-family:var(--font-mono); font-size:1.2rem; font-weight:800; padding:4px 14px; background:rgba(0,0,0,0.15); border-radius:var(--radius-full);">88% Mastery</span>
+            </div>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-gamepad" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Socket.io & WebSockets</h3>
+            <p class="wispr-card-quote">"Powering real-time move synchronization in Rookie.com multiplayer chess engine with zero perceptible delay."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">WebSockets</span>
+              <span class="wispr-card-tag-item">Bi-Directional</span>
+              <span class="wispr-card-tag-item">Room Handshakes</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Rookie.com Engine</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Engine</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-progress-pills" id="tools-dots"></div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SECTION 3: ACHIEVEMENTS (VERTICAL STICKY CURVED SCROLLING TRACK)
+       =================================================================== -->
+  <div id="achievements-section" class="wispr-sticky-scroll-section" data-curved-track="achievements">
+    <div class="wispr-sticky-viewport">
+      <div class="container text-center" style="margin-bottom: 20px;">
+        <div class="hero-pill-badge" style="margin-bottom:12px;">
+          <i class="fas fa-award"></i>
+          <span>03 / ACHIEVEMENTS & METRICS (CURVED VERTICAL SCROLL)</span>
+        </div>
+        <h2 class="hero-main-heading" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); margin-bottom:0;">
+          Scroll Vertically Down for Key <span class="font-serif italic text-orange">Achievements</span>
+        </h2>
+      </div>
+
+      <div class="wispr-curved-track-stage">
+
+        <!-- Achievement Card 1: 70+ DSA Problems -->
+        <div class="wispr-curved-card card-theme-green" data-index="0">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-medal"></i> Algorithmic Benchmark</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-trophy" style="font-size:3.8rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">70+ Solved Algorithmic DSA Problems</h3>
+            <p class="wispr-card-quote">"Solved over 70+ complex data structure & algorithm problems across Take You Forward & LeetCode targeting Graphs, DP, Trees, and STL optimization."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Dynamic Programming</span>
+              <span class="wispr-card-tag-item">Graph Theory</span>
+              <span class="wispr-card-tag-item">C++ STL</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Take You Forward & LeetCode</span>
+            <a href="https://takeuforward.org/profile/dhairya_7" target="_blank" class="wispr-card-btn">
+              <span>View TUF Profile</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Achievement Card 2: Hackathon Rapid MVP Execution -->
+        <div class="wispr-curved-card card-theme-orange" data-index="1">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-stopwatch"></i> Hackathon Sprints</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-fire-flame-curved" style="font-size:3.8rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Hackathon MVP Creator</h3>
+            <p class="wispr-card-quote">"Architected and delivered full production web backends and databases for Skill Setu, VidyaSetu, and CodeTantraa within tight 24-48 hour deadlines."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Skill Setu</span>
+              <span class="wispr-card-tag-item">VidyaSetu</span>
+              <span class="wispr-card-tag-item">CodeTantraa</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">24-48hr Live Deployments</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Repositories</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Achievement Card 3: Kaggle Data Science Specialist -->
+        <div class="wispr-curved-card card-theme-cream" data-index="2">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fab fa-kaggle"></i> Data Analytics</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-brain" style="font-size:3.8rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Kaggle Data Science Specialist</h3>
+            <p class="wispr-card-quote">"Building mathematical models, statistical analysis, and data cleaning notebooks on Kaggle for B.Tech CS (Data Science) specialization."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Pandas</span>
+              <span class="wispr-card-tag-item">NumPy</span>
+              <span class="wispr-card-tag-item">Predictive ML</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Kaggle Benchmarks</span>
+            <a href="https://www.kaggle.com/dhairyaverma07" target="_blank" class="wispr-card-btn">
+              <span>Kaggle Profile</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Achievement Card 4: Creator of Rookie.com -->
+        <div class="wispr-curved-card card-theme-cyan" data-index="3">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-chess-queen"></i> Systems Project</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-chess-knight" style="font-size:3.8rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Creator of Rookie.com Engine</h3>
+            <p class="wispr-card-quote">"Designed and deployed a full real-time WebSockets multiplayer chess application featuring zero-latency move validation and custom room links."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">WebSockets</span>
+              <span class="wispr-card-tag-item">Node.js</span>
+              <span class="wispr-card-tag-item">Socket.io</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Low-Latency Engine</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Source</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-progress-pills" id="achievements-dots"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SERVICES ACCORDION ==================== -->
+  <section id="services" class="section-padding" style="background:var(--bg-surface);">
+    <div class="container">
+      
+      <div class="hero-pill-badge" style="margin-bottom:12px;">
+        <i class="fas fa-sparkles"></i>
+        <span>04 / SERVICES & CAPABILITIES</span>
+      </div>
+
+      <h2 class="hero-main-heading" style="font-size:clamp(2.4rem, 5vw, 3.8rem); margin-bottom:16px;">
+        How I Bring <span class="font-serif italic text-orange">Ideas to Life</span>
+      </h2>
+
+      <!-- Accordion List -->
+      <div class="services-accordion-list" id="services-accordion">
+        
+        <div class="accordion-card active">
+          <div class="accordion-header">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">01.</span>
+              <h3 class="accordion-title">Core Languages & Algorithmic DSA</h3>
+            </div>
+            <div class="accordion-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="accordion-body">
+            <p class="accordion-desc-text">
+              Deep-rooted expertise in C++ STL and Python. Solving complex data structure problems, dynamic programming challenges, and optimizing execution time.
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <a href="https://takeuforward.org/profile/dhairya_7" target="_blank" class="btn btn-wispr-dark btn-sm"><i class="fas fa-laptop-code"></i> TUF DSA Profile</a>
+              <a href="https://leetcode.com/u/DhairyaVerma07/" target="_blank" class="btn btn-wispr-dark btn-sm"><i class="fas fa-code"></i> LeetCode Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-card">
+          <div class="accordion-header">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">02.</span>
+              <h3 class="accordion-title">Real-Time Databases & Backend</h3>
+            </div>
+            <div class="accordion-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="accordion-body">
+            <p class="accordion-desc-text">
+              Building instant real-time data streaming backends with Supabase row-level subscriptions, Firebase auth/listeners, and low-latency Node.js WebSockets.
+            </p>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="btn btn-wispr-dark btn-sm"><i class="fab fa-github"></i> GitHub Repositories</a>
+          </div>
+        </div>
+
+        <div class="accordion-card">
+          <div class="accordion-header">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">03.</span>
+              <h3 class="accordion-title">Data Science & Predictive Analytics</h3>
+            </div>
+            <div class="accordion-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="accordion-body">
+            <p class="accordion-desc-text">
+              Extracting insights from unstructured data, training mathematical models, statistical analysis, and clean data processing pipelines using Pandas & Scikit-Learn.
+            </p>
+            <a href="https://www.kaggle.com/dhairyaverma07" target="_blank" class="btn btn-wispr-dark btn-sm"><i class="fab fa-kaggle"></i> Kaggle Profile</a>
+          </div>
+        </div>
+
+        <div class="accordion-card">
+          <div class="accordion-header">
+            <div class="accordion-title-wrap">
+              <span class="accordion-num">04.</span>
+              <h3 class="accordion-title">Rapid Full-Stack Web Development</h3>
+            </div>
+            <div class="accordion-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="accordion-body">
+            <p class="accordion-desc-text">
+              Crafting sleek, high-speed interactive web applications with micro-interactions, responsive CSS layout, React.js components, and live REST endpoints.
+            </p>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="btn btn-wispr-dark btn-sm"><i class="fab fa-github"></i> Web Projects</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================
+       SECTION 5: ACADEMIC & WORK JOURNEY (VERTICAL STICKY CURVED SCROLLING TRACK)
+       =================================================================== -->
+  <div id="journey-section" class="wispr-sticky-scroll-section" data-curved-track="journey">
+    <div class="wispr-sticky-viewport">
+      <div class="container text-center" style="margin-bottom: 20px;">
+        <div class="hero-pill-badge" style="margin-bottom:12px;">
+          <i class="fas fa-graduation-cap"></i>
+          <span>05 / ACADEMIC & WORK JOURNEY (CURVED VERTICAL SCROLL)</span>
+        </div>
+        <h2 class="hero-main-heading" style="font-size:clamp(2.2rem, 4.5vw, 3.4rem); margin-bottom:0;">
+          Scroll Vertically Down Through My <span class="font-serif italic text-orange">Journey</span>
+        </h2>
+      </div>
+
+      <div class="wispr-curved-track-stage">
+
+        <!-- Journey Card 1 -->
+        <div class="wispr-curved-card card-theme-orange" data-index="0">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-university"></i> Current Degree</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-building-columns" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">B.Tech CS (Data Science)</h3>
+            <p class="wispr-card-quote">"Enrolled at United Institute of Technology (UIT), Prayagraj (Allahabad). Specializing in mathematical foundations of computing and Data Science."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Data Science</span>
+              <span class="wispr-card-tag-item">Algorithms</span>
+              <span class="wispr-card-tag-item">Databases</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">19 Years Old</span>
+            <a href="https://www.kaggle.com/dhairyaverma07" target="_blank" class="wispr-card-btn">
+              <span>View Work</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Journey Card 2 -->
+        <div class="wispr-curved-card card-theme-green" data-index="1">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-laptop-code"></i> Algorithmic Discipline</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-code" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">70+ DSA Problem Master</h3>
+            <p class="wispr-card-quote">"Rigorous daily problem-solving on Take You Forward and LeetCode, tackling dynamic programming, graphs, binary trees, and C++ STL."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Graphs</span>
+              <span class="wispr-card-tag-item">Dynamic Programming</span>
+              <span class="wispr-card-tag-item">Trees</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">TUF & LeetCode</span>
+            <a href="https://takeuforward.org/profile/dhairya_7" target="_blank" class="wispr-card-btn">
+              <span>TUF Profile</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Journey Card 3 -->
+        <div class="wispr-curved-card card-theme-purple" data-index="2">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-rocket"></i> Hackathon Sprints</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-laptop" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Full-Stack & Backend Lead</h3>
+            <p class="wispr-card-quote">"Lead developer for Skill Setu, VidyaSetu, and CodeTantraa hackathon entries, delivering live database architectures on Supabase & Render."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Supabase</span>
+              <span class="wispr-card-tag-item">Firebase</span>
+              <span class="wispr-card-tag-item">Render</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">24-48hr Deadlines</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>GitHub Repos</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Journey Card 4 -->
+        <div class="wispr-curved-card card-theme-cyan" data-index="3">
+          <div>
+            <span class="wispr-card-top-tag"><i class="fas fa-bolt"></i> WebSockets Engine</span>
+            <div class="wispr-card-graphic">
+              <i class="fas fa-chess-board" style="font-size:3.5rem;"></i>
+            </div>
+            <h3 class="wispr-card-title">Multiplayer Engine Creator</h3>
+            <p class="wispr-card-quote">"Architected Rookie.com multiplayer chess engine using Node.js and Socket.io to achieve instant bi-directional game state broadcast."</p>
+            <div class="wispr-card-tags">
+              <span class="wispr-card-tag-item">Socket.io</span>
+              <span class="wispr-card-tag-item">Node.js</span>
+              <span class="wispr-card-tag-item">React</span>
+            </div>
+          </div>
+          <div class="wispr-card-footer">
+            <span style="font-family:var(--font-mono); font-size:0.85rem; font-weight:700;">Rookie.com Engine</span>
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="wispr-card-btn">
+              <span>View Project</span>
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-progress-pills" id="journey-dots"></div>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT & CONTACT ==================== -->
+  <section id="about" class="section-padding" style="background:var(--bg-surface);">
+    <div class="container">
+      
+      <div class="hero-pill-badge" style="margin-bottom:12px;">
+        <i class="fas fa-envelope"></i>
+        <span>06 / GET IN TOUCH</span>
+      </div>
+
+      <h2 class="hero-main-heading" style="font-size:clamp(2.4rem, 5vw, 3.8rem); margin-bottom:16px;">
+        Let's Build <span class="font-serif italic text-orange">Together</span>
+      </h2>
+
+      <div class="about-contact-grid">
+        
+        <!-- About Left -->
+        <div class="about-card">
+          <div style="width:140px; height:140px; border-radius:50%; overflow:hidden; margin:0 auto 20px; border:3px solid var(--accent-orange);">
+            <img src="profile.png" alt="Dhairya Verma" style="width:100%; height:100%; object-fit:cover; object-position:top;" />
+          </div>
+          <h3 style="font-size:1.8rem; margin-bottom:4px;">Dhairya Verma</h3>
+          <p class="text-orange" style="font-weight:700; margin-bottom:12px;">Data Science & DSA Specialist</p>
+          <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; margin-bottom:24px;">
+            19-year-old B.Tech CS (Data Science) undergraduate at United Institute of Technology (UIT). Passionate about C++, Python, Supabase, Firebase, and building rapid hackathon MVPs.
+          </p>
+
+          <div style="display:flex; gap:12px; justify-content:center;">
+            <a href="https://github.com/DhairyaVerma7" target="_blank" class="btn btn-wispr-pill btn-sm"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/dhairya-verma-89639b35b/" target="_blank" class="btn btn-wispr-pill btn-sm"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a href="mailto:vermadhairya96@gmail.com" class="btn btn-wispr-pill btn-sm"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+
+        <!-- Contact Form Right -->
+        <div class="contact-card">
+          <h3 style="font-size:1.6rem; margin-bottom:20px;">Send a Direct Message</h3>
+          
+          <form id="contact-form">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea id="form-message" class="form-control" rows="4" placeholder="Tell me about your project or hackathon..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-wispr-dark" style="width:100%; padding:14px;">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="wispr-footer text-center">
+    <div class="container">
+      <p style="font-size:0.9rem; color:var(--text-muted);">
+        © 2026 Dhairya Verma. Built with Wispr Flow design principles, C++, Python & High-Speed Web Tech.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL OVERLAY ==================== -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-box">
+      <button id="modal-close" style="position:absolute; top:20px; right:20px; font-size:1.2rem; color:var(--text-primary);"><i class="fas fa-times"></i></button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- ==================== INTERACTIVE SCRIPT ENGINE ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ===================================================================
+      // WISPR FLOW VERTICAL SCROLL STICKY CURVED FLIGHT ENGINE
+      // Curves cards from bottom-left (-180px, 220px) up to top-right (200px, -240px)
+      // as the user scrolls vertically down the page!
+      // ===================================================================
+      const curvedSections = document.querySelectorAll('.wispr-sticky-scroll-section');
+
+      curvedSections.forEach(section => {
+        const cards = section.querySelectorAll('.wispr-curved-card');
+        const dotsContainer = section.querySelector('.scroll-progress-pills');
+        const total = cards.length;
+
+        // Render pagination indicator dots
+        if (dotsContainer && total > 0) {
+          dotsContainer.innerHTML = '';
+          for (let i = 0; i < total; i++) {
+            const dot = document.createElement('div');
+            dot.className = i === 0 ? 'progress-dot active' : 'progress-dot';
+            dotsContainer.appendChild(dot);
+          }
+        }
+      });
+
+      function updateCurvedScroll() {
+        curvedSections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const cards = Array.from(section.querySelectorAll('.wispr-curved-card'));
+          const dots = Array.from(section.querySelectorAll('.progress-dot'));
+          const total = cards.length;
+          if (total === 0) return;
+
+          // Normalized scroll progress of sticky section (0 to 1)
+          const sectionHeight = section.offsetHeight - window.innerHeight;
+          if (sectionHeight <= 0) return;
+          const scrollProgress = Math.max(0, Math.min(1, -rect.top / sectionHeight));
+
+          // Calculate active card index float
+          const cardStep = 1 / total;
+          const activeIndexFloat = scrollProgress * (total - 1);
+          const activeIndex = Math.round(activeIndexFloat);
+
+          // Update pagination dots
+          dots.forEach((dot, idx) => {
+            if (idx === activeIndex) dot.classList.add('active');
+            else dot.classList.remove('active');
+          });
+
+          // Compute exact curved flight transform for each card
+          cards.forEach((card, idx) => {
+            // Distance from current scroll position
+            const diff = idx - activeIndexFloat;
+
+            if (diff < -1.5) {
+              // Card has flown off top-right
+              card.style.transform = `translate3d(240px, -280px, 0) rotate(14deg) scale(0.75)`;
+              card.style.opacity = '0';
+              card.style.pointerEvents = 'none';
+              card.style.zIndex = '1';
+            } else if (diff > 1.5) {
+              // Card is waiting at bottom-left
+              card.style.transform = `translate3d(-240px, 280px, 0) rotate(-14deg) scale(0.75)`;
+              card.style.opacity = '0';
+              card.style.pointerEvents = 'none';
+              card.style.zIndex = '1';
+            } else {
+              // Card is in active curved transition zone!
+              // Curve trajectory math:
+              // diff = 0  => center (0, 0, rotate: 0)
+              // diff > 0  => entering from bottom-left (negative X, positive Y, negative rotation)
+              // diff < 0  => exiting to top-right (positive X, negative Y, positive rotation)
+
+              const translateX = -diff * 220; // Entering from left (-), exiting to right (+)
+              const translateY = diff * 240;  // Entering from bottom (+), exiting to top (-)
+              const rotateDeg = -diff * 12;   // Entering tilted left (-), exiting tilted right (+)
+              const scale = 1 - Math.abs(diff) * 0.15;
+              const opacity = Math.max(0, Math.min(1, 1 - Math.abs(diff) * 0.8));
+
+              card.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) rotate(${rotateDeg}deg) scale(${scale})`;
+              card.style.opacity = opacity.toFixed(3);
+              card.style.zIndex = Math.round(100 - Math.abs(diff) * 10);
+              card.style.pointerEvents = Math.abs(diff) < 0.4 ? 'auto' : 'none';
+            }
+          });
+        });
+      }
+
+      window.addEventListener('scroll', updateCurvedScroll, { passive: true });
+      window.addEventListener('resize', updateCurvedScroll);
+      updateCurvedScroll();
+
+      // --- Accordion Interactivity ---
+      const accordions = document.querySelectorAll('.accordion-card');
+      accordions.forEach(card => {
+        card.addEventListener('click', () => {
+          accordions.forEach(c => c.classList.remove('active'));
+          card.classList.add('active');
+        });
+      });
+
+      // --- Theme Switcher ---
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlEl = document.documentElement;
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const current = htmlEl.getAttribute('data-theme');
+          const next = current === 'light' ? 'dark' : 'light';
+          htmlEl.setAttribute('data-theme', next);
+          themeToggle.innerHTML = next === 'light' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+      }
+
+      // --- Mobile Menu Toggle ---
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('open');
+        });
+      }
+
+      // --- Project Modals Data ---
+      const projectDetails = {
+        omnisight: {
+          title: "OmniSight: Multi-Modal AI Agent",
+          desc: "Processes high-frame-rate video feeds in parallel using custom tensor kernels. It performs object detection, spatial tracking, and visual question answering (VQA) with sub-35ms inference latency.",
+          highlights: ["Real-time object tracking with dynamic bounding box trajectory estimation", "Low-latency tensor pipeline running on CUDA/TensorRT", "Scalable microservice architecture with asynchronous WebSocket streaming"]
+        },
+        hyperflow: {
+          title: "HyperFlow: Low Latency Matching Engine",
+          desc: "Built for high-frequency trading scenarios, HyperFlow uses lock-free circular ring buffers, CPU cache-aligned data structures, and memory-mapped IO to ensure deterministic latency under 2.1 microseconds.",
+          highlights: ["Zero dynamic memory allocation in critical execution paths", "Lock-free SPSC and MPSC queue channels", "2.5M transactions per second benchmarked execution"]
+        },
+        rookie: {
+          title: "Rookie.com: Multiplayer Chess Engine",
+          desc: "Designed a low-latency WebSockets multiplayer chess application with instantaneous turn synchronization and room invitation links.",
+          highlights: ["Instant move synchronization over WebSockets", "Room creation & shareable match links", "Node.js & Socket.io server backend"]
+        },
+        nexusdata: {
+          title: "NexusData: Cloud Analytics Platform",
+          desc: "Modern collaborative SaaS analytics suite offering instant SQL exploration, automated ETL ingestion, and rich canvas dashboards.",
+          highlights: ["Interactive drag-and-drop query and visualization builder", "Automated schema inference and anomaly detection triggers", "BigQuery and PostgreSQL database integration"]
+        },
+        hackathon: {
+          title: "Skill Setu, VidyaSetu & CodeTantraa",
+          desc: "Architected high-speed backend systems with Supabase & Firebase under 24-48hr hackathon deadlines. Deployed live apps on Render.",
+          highlights: ["Built live production apps in under 48 hours", "Supabase Row-Level Security & Firebase Auth", "Hosted on Render with live web endpoints"]
+        },
+        alphaforecast: {
+          title: "AlphaForecast: Financial Predictive AI",
+          desc: "Deep transformer and LSTM neural model for temporal multivariate asset price forecasting and risk factor decomposition.",
+          highlights: ["Temporal Convolutional Networks (TCN) + Attention mechanisms", "Backtesting engine simulating slippage and commissions", "SHAP feature importance plots"]
+        }
+      };
+
+      const modal = document.getElementById('project-modal');
+      const modalClose = document.getElementById('modal-close');
+      const modalContent = document.getElementById('modal-content');
+
+      document.querySelectorAll('.open-modal-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = btn.getAttribute('data-id');
+          const data = projectDetails[id];
+          if (data && modalContent && modal) {
+            modalContent.innerHTML = `
+              <h2 style="font-family:var(--font-serif); font-size:2rem; margin-bottom:12px;">${data.title}</h2>
+              <p style="color:var(--text-muted); margin-bottom:20px; line-height:1.6;">${data.desc}</p>
+              <h4 style="font-size:1.1rem; margin-bottom:10px;"><i class="fas fa-check-circle text-orange"></i> Key Features</h4>
+              <ul style="list-style:none; margin-bottom:24px; color:var(--text-muted); display:flex; flex-direction:column; gap:8px;">
+                ${data.highlights.map(h => `<li><i class="fas fa-chevron-right text-orange" style="font-size:0.8rem; margin-right:8px;"></i> ${h}</li>`).join('')}
+              </ul>
+              <a href="https://github.com/DhairyaVerma7" target="_blank" class="btn btn-wispr-dark"><i class="fab fa-github"></i> View GitHub Source Code</a>
+            `;
+            modal.classList.add('open');
+          }
+        });
+      });
+
+      if (modalClose) modalClose.addEventListener('click', () => modal.classList.remove('open'));
+      if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
+
+      // --- Toast Notifications ---
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('form-name').value;
+          showToast(`Message Sent!`, `Thank you ${name}! Dhairya will get back to you shortly.`);
+          contactForm.reset();
+        });
+      }
+
+      function showToast(title, msg) {
+        const container = document.getElementById('toast-container');
+        if (!container) return;
+        const toast = document.createElement('div');
+        toast.className = 'toast-card';
+        toast.innerHTML = `<i class="fas fa-paper-plane text-orange" style="font-size:1.3rem;"></i><div><strong style="display:block;">${title}</strong><span style="font-size:0.85rem; color:var(--text-muted);">${msg}</span></div>`;
+        container.appendChild(toast);
+        setTimeout(() => toast.remove(), 4000);
+      }
+
+    });
+  </script>
+</body>
+</html>
